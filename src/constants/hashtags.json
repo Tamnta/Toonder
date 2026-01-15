@@ -1,0 +1,31 @@
+"hashtags_master_list": [
+      {
+        "category": "Genres",
+        "tags": ["romance", "josei", "shojo", "action", "fantasy", "drama", "smut", "comedy", "slice_of_life", "thriller",
+        "supernatural", "horror", "mystery", "sci-fi", "superhero", "sports", "historical", "isekai", "school_life", "harem",
+        "reverse_harem", "family", "dark_romantasy", "spicy", "+18", "war", "crime", "political", "time_travel", "philosophical",
+        "alternate_universe", "mature", "domestic", "childcare", "bl", "gl"]
+      },
+      {
+        "category": "Themes & Tropes",
+        "tags": ["enemies_to_lovers", "reincarnation", "royalty", "vampires", "ceo", "school_life", "revenge", "forbidden_love", 
+        "taboo_love", "toxic_family", "secret_identity", "end_of_the_world", "healing", "villainess", "contract_marriage", 
+        "fake_marriage", "yandere_ml", "toxic_ml", "obsessive_ml", "weak_to_strong", "love_triangle", "cold_duke", 
+        "princess_x_knight", "prince_x_maid", "arrogant_ml", "system", "game", "regression", "time_loop", "childhood_friend",
+        "second_chance", "miscommunication", "oblivious_mc", "martial_arts", "ghost", "poison_taster", "villain_sidekick", "chef",
+        "inlaws", "no_love_triangle", "jelousy", "no_jelousy", "affectionate_ml", "cold_ml", "green_flag_ml", "red_flag_ml", 
+        "black_flag_ml", "saintess_x_knight", "slow_burn", "friends_to_lovers", "hidden_saintess", "princess_x_prince", "unrequited_love", 
+        "age_gap", "crossdressing", "disguised_as_a_man", "gender_bender"]
+      },
+      {
+        "category": "Emotional Tone",
+        "tags": ["tragedy", "angst", "fluff", "dark", "spicy", "emotional", "wholesome", "healing", "heartwarming", "sweet", 
+        "romantic", "bittersweet", "heartwrenching", "psychological", "intense", "emotional_rollercoaster", "empowering", 
+        "nostalgic", "melancholic", "obsession", "comfort", "cozy", "make_me_cry"]
+      },
+      {
+        "category": "Status",
+        "tags": ["ongoing", "finished", "hiatus", "new_release", "abandoned", "unknown"]
+      }
+    ]
+  }

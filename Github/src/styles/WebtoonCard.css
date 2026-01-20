@@ -1,0 +1,47 @@
+/* Contenedor de la tarjeta en la lista de búsqueda */
+.webtoon-card-item {
+    display: flex; /* Para poner imagen a la izquierda y texto a la derecha */
+    background-color: #121212; /* Fondo oscuro que elegimos */
+    border: 1px solid #BDE0FE; /* Borde sutil en Cian Pastel */
+    border-radius: 20px; /* Bordes redondeados modernos */
+    padding: 15px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: transform 0.2s; /* Efecto suave al tocarla */
+}
+
+/* La imagen miniatura */
+.webtoon-img-thumb {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px; /* También redondeada */
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+/* Título de la obra */
+.webtoon-title {
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Estilo para los Hashtags (Burbujas) */
+.tag-badge {
+    display: inline-block;
+    background-color: #8F00FF; /* Violeta Eléctrico */
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px; /* Forma de píldora */
+    font-size: 0.8rem;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+/* Las estrellas de calificación */
+.rating-stars {
+    color: #BDE0FE; /* Cian Pastel para que brille */
+    font-size: 0.9rem;
+    margin-top: 8px;
+}

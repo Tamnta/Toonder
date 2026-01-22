@@ -1,6 +1,6 @@
-/* Configuracion Base */
+/* 1. CONFIGURACIÓN BASE */
 body {
-    background-color: #121212; /* Tu color Dark Mode */
+    background-color: #121212;
     color: white;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -13,7 +13,7 @@ body {
     position: relative;
 }
 
-/* Portada Vertical */
+/* 2. PORTADA VERTICAL */
 .cover-wrapper {
     position: relative;
     width: 100%;
@@ -35,7 +35,7 @@ body {
     pointer-events: none;
 }
 
-/* Contenido Principal */
+/* 3. CONTENIDO PRINCIPAL */
 .content-section {
     padding: 20px;
     margin-top: -50px;
@@ -43,19 +43,18 @@ body {
 }
 
 .title {
-    font-size: 32px; /* Un poco más grande para que resalte */
+    font-size: 32px;
     margin-bottom: 5px;
-    color: #BDE0FE; /* Tu Cian Pastel */
+    color: #BDE0FE;
 }
 
 .author {
-    color: #8A2BE2; /* Tu Violeta Eléctrico */
+    color: #8A2BE2;
     margin: 0 0 20px 0;
     font-weight: bold;
     font-size: 18px;
 }
 
-/* Tags de Género */
 .tag {
     background: rgba(189, 224, 254, 0.1);
     padding: 6px 14px;
@@ -63,40 +62,20 @@ body {
     font-size: 13px;
     margin-right: 8px;
     border: 1px solid #BDE0FE;
-    display: inline-block; /* Para que el margen funcione bien */
+    display: inline-block;
 }
 
-/* --- NUEVO: Estrellas y Espaciado --- */
+/* 4. ESTRELLAS Y RATING */
 .rating-container {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-top: 30px; /* Aquí le damos el "aire" respecto a los tags */
-    margin-bottom: 30px; /* Espacio antes de la sinopsis */
-}
-
-/* Estilos para el botón de corazón */
-.favorite-btn {
-    background: transparent; /* Sin fondo */
-    border: none; /* Sin borde cuadrado */
-    cursor: pointer; /* Manito al pasar el mouse */
-    color: #BDE0FE; /* El color del contorno será tu Cian Pastel */
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    margin-left: 15px; /* Un empujoncito extra para separarlo del estatus */
-    transition: all 0.3s ease; /* Animación suave para todo */
-}
-
-/* Efecto Hover: ¡Cuando pones el mouse encima! */
-.favorite-btn:hover {
-    transform: scale(1.15); /* El corazón crece un poquito (efecto latido) */
-    color: #8A2BE2; /* El contorno cambia a Violeta Eléctrico */
-    fill: #8A2BE2; /* ¡El interior se rellena de Violeta! */
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .stars {
-    color: #FFD700; /* Dorado para que brillen */
+    color: #FFD700;
     font-size: 22px;
     letter-spacing: 2px;
 }
@@ -116,34 +95,26 @@ body {
     text-transform: uppercase;
 }
 
-/* Sinopsis y Botón */
-.synopsis {
-    line-height: 1.7;
-    color: #cccccc;
-    font-size: 16px;
-    margin-bottom: 30px;
-}
-
-.read-button {
-    background-color: #8A2BE2;
-    color: white;
+/* 5. BOTÓN DE FAVORITO (CORAZÓN) */
+.favorite-btn {
+    background: transparent;
     border: none;
-    padding: 16px;
-    width: 100%;
-    border-radius: 30px; /* Más redondeado, estilo app moderna */
-    font-weight: bold;
-    font-size: 18px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    color: #BDE0FE;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    transition: all 0.3s ease;
 }
 
-.read-button:hover {
-    background-color: #9d4edd; /* Cambia de color suavemente al pasar el mouse */
+.favorite-btn:hover {
+    transform: scale(1.15);
+    color: #8A2BE2;
 }
 
-/* Estado ACTIVO: Aplicamos el color directamente al SVG para que no haya dudas */
 .favorite-btn.is-active svg {
-    fill: #8A2BE2 !important; /* El !important asegura que gane al 'none' del HTML */
+    fill: #8A2BE2 !important;
     color: #8A2BE2;
 }
 
@@ -152,3 +123,54 @@ body {
     filter: drop-shadow(0 0 8px rgba(138, 43, 226, 0.5));
 }
 
+/* 6. SINOPSIS */
+.synopsis {
+    line-height: 1.7;
+    color: #cccccc;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* 7. EL BOTÓN CON BRILLO (RECORTE DE MANCHA) */
+.read-button {
+    background-color: #8A2BE2;
+    color: white;
+    border: none;
+    padding: 16px;
+    width: 100%;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden; /* ¡ESTO QUITA LA MANCHA BLANCA! */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.read-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; 
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    transform: skewX(-25deg);
+    transition: none;
+}
+
+.read-button:hover {
+    background: linear-gradient(45deg, #8A2BE2, #6A0DAD);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(138, 43, 226, 0.4);
+}
+
+.read-button:hover::before {
+    left: 150%;
+    transition: left 0.7s ease-in-out;
+}

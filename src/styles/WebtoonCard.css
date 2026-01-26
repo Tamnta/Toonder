@@ -26,22 +26,25 @@
     padding-bottom: 30px;
 }
 
+/* --- SOLO ESTE BLOQUE DEBE QUEDAR --- */
 .logo-text {
     font-size: 70px;
     margin-top: 10vh;
     margin-bottom: 20px;
     background: linear-gradient(to bottom, #BDE0FE, #8F00FF);
-    -webkit-background-clip: text;
+    
+    /* Estas dos líneas trabajan juntas para el efecto de color en el texto */
+    -webkit-background-clip: text; /* Para Chrome/Safari */
+    background-clip: text;         /* LA VERSIÓN ESTÁNDAR (Adiós error amarillo) */
+    
     -webkit-text-fill-color: transparent;
+    
     text-align: center;
     cursor: pointer;
     transition: transform 0.2s;
 }
 
-.logo-text:active {
-    transform: scale(0.95);
-    filter: drop-shadow(0 0 15px #8F00FF);
-}
+
 
 .search-box {
     width: 90%;

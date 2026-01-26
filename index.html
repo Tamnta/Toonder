@@ -3,27 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toonder - Preview</title>
+    <title>Toonder - Busca tu historia</title>
     <link rel="stylesheet" href="src/styles/WebtoonCard.css">
 </head>
-<body style="background-color: #121212; display: flex; justify-content: center; padding-top: 50px; font-family: sans-serif;">
+<body class="main-body">
 
-    <a href="src/screens/DetailScreen.html" style="text-decoration: none; color: inherit;">
-    
-        <div class="webtoon-card-item">
-            <img src="assets/thumbnail_sp.JPEG" class="webtoon-img-thumb" alt="Portada de The Snake Princess">
-    
-            <div class="webtoon-info">
-                <div class="webtoon-title">The Snake Princess</div>
-                <div class="webtoon-tags">
-                    <span class="tag-badge">#Romance</span>
-                    <span class="tag-badge">#Josei</span>
-                </div>
-                <div class="rating-stars">★★★★★ (4.9)</div>
+    <main class="home-wrapper">
+
+        <section class="hero-section">
+            <h1 class="logo-text">Toonder</h1>
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="main-search" placeholder="¿Qué quieres leer hoy?">
             </div>
-        </div>
-    
-    </a>
+        </section>
+
+        <section class="results-section">
+            <h2 class="results-title">Trending 🔥</h2>
+            
+            <div id="results-grid" class="results-grid">
+                
+                <a href="src/screens/DetailScreen.html" class="webtoon-card-item">
+                    <img src="assets/thumbnail_sp.JPEG" class="webtoon-img-thumb" alt="The Snake Princess">
+                    
+                    <div class="webtoon-info">
+                        <div class="webtoon-tags">
+                            <span class="tag-badge">#Romance</span>
+                            <span class="tag-badge">#Josei</span>
+                        </div>
+                        
+                        <div class="webtoon-title">The Snake Princess</div>
+                        
+                        <div class="sub-count">1.3k Suscriptores</div>
+                    </div>
+                </a>
+
+                </div>
+        </section>
+
+    </main>
 
 </body>
 </html>

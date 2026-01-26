@@ -1,47 +1,172 @@
-/* Contenedor de la tarjeta en la lista de búsqueda */
-.webtoon-card-item {
-    display: flex; /* Para poner imagen a la izquierda y texto a la derecha */
-    background-color: #121212; /* Fondo oscuro que elegimos */
-    border: 1px solid #BDE0FE; /* Borde sutil en Cian Pastel */
-    border-radius: 20px; /* Bordes redondeados modernos */
-    padding: 15px;
-    margin-bottom: 15px;
-    overflow: hidden;
-    transition: transform 0.2s; /* Efecto suave al tocarla */
-}
-
-/* La imagen miniatura */
-.webtoon-img-thumb {
-    width: 100px;
-    height: 100px;
-    border-radius: 15px; /* También redondeada */
-    object-fit: cover;
-    margin-right: 15px;
-}
-
-/* Título de la obra */
-.webtoon-title {
-    color: #FFFFFF;
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-/* Estilo para los Hashtags (Burbujas) */
-.tag-badge {
-    display: inline-block;
-    background-color: #8F00FF; /* Violeta Eléctrico */
+/* --- ESTILOS BASE --- */
+.main-body {
+    background-color: #121212;
+    margin: 0;
+    font-family: sans-serif;
     color: white;
-    padding: 5px 12px;
-    border-radius: 20px; /* Forma de píldora */
-    font-size: 0.8rem;
-    margin-right: 5px;
-    margin-top: 5px;
 }
 
-/* Las estrellas de calificación */
-.rating-stars {
-    color: #BDE0FE; /* Cian Pastel para que brille */
-    font-size: 0.9rem;
-    margin-top: 8px;
+.home-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+/* --- LOGO Y BUSCADOR (ESTILO GOOGLE) --- */
+.hero-section {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 30px;
+}
+
+.logo-text {
+    font-size: 70px;
+    margin-top: 10vh;
+    margin-bottom: 20px;
+    background: linear-gradient(to bottom, #BDE0FE, #8F00FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.logo-text:active {
+    transform: scale(0.95);
+    filter: drop-shadow(0 0 15px #8F00FF);
+}
+
+.search-box {
+    width: 90%;
+    max-width: 500px;
+    background: #1a0f2e;
+    border: 1px solid #8F00FF;
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(143, 0, 255, 0.1);
+}
+
+.search-box:focus-within {
+    border-color: #BDE0FE;
+    box-shadow: 0 0 15px rgba(189, 224, 254, 0.3);
+    background: #25163d;
+}
+
+.search-box input {
+    background: transparent;
+    border: none;
+    color: white;
+    margin-left: 10px;
+    width: 100%;
+    outline: none;
+}
+
+/* --- SECCIÓN DE RESULTADOS (TRENDING) --- */
+.results-section {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto 40px auto;
+}
+
+.results-title {
+    color: #BDE0FE;
+    font-size: 1.1rem;
+    margin-bottom: 25px; /* Más pegado a las miniaturas */
+    padding-left: 0;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 100%;
+}
+
+/* --- TARJETA DE WEBTOON (FLOTANTE Y CENTRADA) --- */
+.webtoon-card-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra todo el contenido */
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin-bottom: 20px;
+    overflow: visible;
+    text-decoration: none;
+}
+
+
+.webtoon-img-thumb {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    max-width: 120px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 12px; /* Espacio para que el brillo respire */
+    transition: transform 0.4s ease;
+}
+
+/* EFECTOS HOVER */
+.webtoon-card-item:hover {
+    transform: translateY(-5px);
+}
+
+.webtoon-card-item:hover .webtoon-img-thumb {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 15px rgba(143, 0, 255, 0.6));
+}
+
+/* CONTENEDOR DE INFORMACIÓN */
+.webtoon-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra hashtags, título y subs */
+    width: 100%;
+}
+
+/* HASHTAGS (LOS PROTAGONISTAS) */
+.webtoon-tags {
+    margin-bottom: 6px;
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tag-badge {
+    background-color: rgba(143, 0, 255, 0.2);
+    border: 1px solid #8F00FF;
+    color: #BDE0FE;
+    padding: 3px 8px;
+    border-radius: 15px;
+    font-size: 0.75rem; /* Un poco más grandes que antes */
+    font-weight: bold;
+
+}
+
+/* TÍTULO */
+.webtoon-title {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+/* SUSCRIPTORES (SUTIL) */
+.sub-count {
+    color: rgba(189, 224, 254, 0.5); /* Más transparente */
+    font-size: 0.7rem;
+    font-weight: 300;
 }
